@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Иван Филипьев](https://up.htmlacademy.ru/htmlcss/40/user/2514125).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Варнавский](https://htmlacademy.ru/profile/anton_varnauski).
 
 ---
 
