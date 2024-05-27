@@ -2,7 +2,7 @@
 
 * Студент: [Иван Филипьев](https://up.htmlacademy.ru/htmlcss/40/user/2514125).
 * Наставник: [Антон Варнавский](https://htmlacademy.ru/profile/anton_varnauski).
-
+* Сайт: [Мой сайт Сидона](https://github.com/Faretos/2514125-sedona-40).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
