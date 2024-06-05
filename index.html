@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Каталог. HTML Academy: Седона</title>
   </head>
-  <header class="header-main">
+  <header class="header-main" data-test="header">
     <nav class="navigation-main">
       <a class="sedona-logo-main">
         <img class="main-header-logo" src="#" alt="Логотип города Sedona">
@@ -36,12 +36,12 @@
     </nav>
     <a class="want-here-btn" href="#">Хочу сюда!</a>
   </header>
-  <main class="main-page">
-    <section class="hero">
+  <main class="main-page" datatest="main">
+    <section class="hero" dataset="hero">
       <h1 class="visually-hidden">Добро пожаловать в Седона</h1>
       <img class="hero-img" src="#" alt="Надпись Добро пожаловать в Седона">
     </section>
-    <section class="advantages-of-sedona">
+    <section class="advantages-of-sedona" dataset="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <p class="heading">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
       <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -69,8 +69,6 @@
           <img src="#" alt="Вид на каньон">
         </li>
       </ul>
-    </section>
-    <section class="offers">
       <h2 class="visually-hidden">Предложения</h2>
       <p class="heading">Приезжайте в Седону отдохнуть в комфорте и уюте!</p>
       <p>Опытный персонал и качественное обслуживание!</p>
@@ -89,12 +87,12 @@
         </li>
       </ul>
     </section>
-    <section class="hotel-search">
+    <section class="hotel-search" data-test="search">
       <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <a class="search-btn" href="#">Поиск гостиницы в Седоне</a>
     </section>
-    <section class="newsletter">
+    <section class="newsletter" data-test="subscribe">
       <h2>Подпишитесь на рассылку</h2>
       <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -104,7 +102,7 @@
       </form>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer" data-test="footer">
     <h2 class="visually-hidden">Контакты</h2>
     <ul class="footer-social-list">
       <li class="footer-social-item">

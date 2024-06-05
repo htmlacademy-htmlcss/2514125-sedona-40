@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Каталог. HTML Academy: Седона</title>
   </head>
-  <header class="header-main">
+  <header class="header-main" data-test="header">
     <nav class="navigation-main">
       <a class="sedona-logo-main">
         <img class="main-header-logo" src="#" alt="Логотип города Sedona">
@@ -36,8 +36,8 @@
     </nav>
     <a class="want-here-btn" href="#">Хочу сюда!</a>
   </header>
-  <main class="catalog-main">
-    <section class="hotel-filters">
+  <main class="catalog-main" datatest="main">
+    <section class="hotel-filters" data-test="filter">
       <h1 class="catalog-filter">Гостиницы Седоны</h1>
       <ol class="breadcrumbs">
         <li class="breadcrumbs-item">
@@ -79,7 +79,7 @@
         <ul class="catalog-filter-list">
           <li class="catalog-filter-item">
             <label class="control">
-              <input class="control-input" type="radio" name="product-group" value="Hotel">
+              <input class="control-input" type="radio" name="product-group" value="Hotel" checked>
               Гостиница
             </label>
           </li>
@@ -108,12 +108,12 @@
         <label class="filter-range-control">
           <input class="range-control-input" type="range" min="0" max="9000">
         </label>
-        <button class="filters-submition" type="submit">Применить</button>
-        <button class="filters-reset" type="reset">Сбросить</button>
       </fieldset>
+      <button class="filters-submition" type="submit">Применить</button>
+      <button class="filters-reset" type="reset">Сбросить</button>
       </form>
     </section>
-    <section class="search-results">
+    <section class="search-results" data-test="catalog">
       <h2 class="search-results-title visually-hidden">Результаты поиска</h2>
       <h3>Найдено гостиниц: 38</h3>
       <select class="select-control" aria-label="Сортировка">
@@ -202,7 +202,7 @@
         </ul>
       </section>
     </section>
-    <section class="newsletter">
+    <section class="newsletter" data-test="subscribe">
       <h2>Подпишитесь на рассылку</h2>
       <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -211,9 +211,9 @@
         <button class="button newsletter-submit" type="submit">Подписаться</button>
       </form>
     </section>
-  </,m>
+  </main>
 
-  <footer class="main-footer">
+  <footer class="main-footer" data-test="footer">
     <h2 class="visually-hidden">Контакты</h2>
     <ul class="footer-social-list">
       <li class="footer-social-item">
