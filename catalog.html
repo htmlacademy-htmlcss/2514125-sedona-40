@@ -28,7 +28,7 @@
         <ul class="navigation-user-list">
           <li class="navigation-user-item">
             <a class="navigation-user-serach navigation-user-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
+              <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
                 <path fill="#000" d="m19.5 18.008-3.7-3.68c1-1.292 1.7-2.983 1.7-4.872 0-4.376-3.6-7.956-8-7.956s-8 3.68-8 8.055c0 4.376 3.6 7.956 8 7.956 1.8 0 3.5-.597 4.9-1.69l3.7 3.679 1.4-1.492Zm-10-2.486c-3.3 0-6-2.685-6-5.967 0-3.282 2.7-5.967 6-5.967s6 2.685 6 5.967c0 3.282-2.7 5.967-6 5.967Z" />
               </svg>
             </a>
@@ -36,7 +36,7 @@
           </li>
           <li class="navigation-user-item">
             <a class="navigation-user-favorites navigation-user-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
+              <svg class="favorites-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none">
                 <path fill="#000" d="M8.9 17c-.3 0-.6-.1-.8-.4-5.4-6.1-6.7-7.5-7-7.9C.4 7.8 0 6.6 0 5.4 0 2.4 2.4 0 5.5 0 6.8 0 8 .5 9 1.3 10 .5 11.3 0 12.5 0c3 0 5.5 2.4 5.5 5.4 0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" />
               </svg>
             </a>
@@ -44,33 +44,32 @@
             <span class="favorites-counter">12</span>
           </li>
         </ul>
-        <a class="want-here-button" href="#">Хочу сюда!</a>
+        <div class="want-here-button-wrapper">
+          <a class="want-here-button" href="#">Хочу сюда!</a>
+        </div>
       </nav>
     </header>
-    <main class="catalog-main main-container" datatest="main">
+    <main class=" main-container catalog-main" datatest="main">
       <div class="page-container">
       <section class="hotel-filters" data-test="filter">
         <h1 class="catalog-title">Гостиницы Седоны</h1>
         <ol class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
-              <svg class="decoration-arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none">
+              <svg class="decoration-house" xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none">
                 <path fill="#fff" d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z" />
                 <path fill="#fff" d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z" />
               </svg>
             </a>
             <span class="visually-hidden">Главная</span>
           </li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" fill="none">
-            <path fill="#fff" d="M6.92 4.97 2.17.72c-.25-.25-.75-.25-1.13 0-.37.25-.25.75 0 1l4.13 3.75-4 3.75a.76.76 0 0 0 0 1c0 .12.37.25.5.25.12 0 .37-.13.5-.25l4.75-4.25a.59.59 0 0 0 0-1Z" />
-          </svg>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="#">Гостиницы</a>
           </li>
         </ol>
         <h2 class="visually-hidden">Фильтры выбора гостиниц</h2>
         <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group fieldset-infrastructure">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
@@ -93,7 +92,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group fieldset-type-of-housing">
             <legend class="catalog-filter-title">Тип Жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
@@ -116,7 +115,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="catalog-filter-group">
+          <fieldset class="catalog-filter-group fieldset-price">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
             <label class="filter-range-control">
               <input class="range-control-input" type="number" name="min-price" value="0" placeholder="от">
@@ -137,60 +136,57 @@
       <section class="search-results" data-test="catalog">
         <div class="search-results-header">
         <h2 class="search-results-title">Найдено гостиниц: 38</h2>
-        <select class="select-control" aria-label="Сортировка">
-          <option value="cheap">Сначала дешевые</option>
-          <option value="expensive">Сначала дорогие</option>
-        </select>
-        <ul class="card-view-buttons">
-          <li class="card-view-item">
-            <a class="card-view-button-grid card-view-button-current" href="catalog.html?view=tile">
-              <span class="visually-hidden">Кнопка отображения списка гостиниц в виде сетки</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none">
-                <rect width="46" height="46" x="1" y="1" stroke="#000" stroke-width="2" rx="3" />
-                <g fill="#000" clip-path="url(#a)">
-                  <path d="M20 17h-4v6h4v-6ZM32 17h-4v6h4v-6ZM26 17h-4v6h4v-6ZM20 25h-4v6h4v-6ZM32 25h-4v6h4v-6ZM26 25h-4v6h4v-6Z" />
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path fill="#fff" d="M16 17h16v14H16z" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
-          </li>
-          <li class="card-view-item">
-            <a class="card-view-button-huge" href="catalog.html?view=card">
-              <span class="visually-hidden">Кнопка отображения списка гостиниц в виде крупных карточек</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none">
-                <rect width="46" height="46" x="1" y="1" stroke="#E5E5E5" stroke-width="2" rx="3" />
-                <g fill="#000" clip-path="url(#a)">
-                  <path d="M32 29H16v2h16v-2ZM30 19v6H18v-6h12Zm2-2H16v10h16V17Z" />
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path fill="#fff" d="M16 17h16v14H16z" />
-                  </clipPath>
-                </defs>
-              </svg>
-          </li>
-          <li class="card-view-item">
-            <a class="card-view-button-list" href="catalog.html?view=list">
-              <span class="visually-hidden">Кнопка отображения списка гостиниц в виде списка</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none">
-                <rect width="46" height="46" x="1" y="1" stroke="#E5E5E5" stroke-width="2" rx="3" />
-                <g fill="#000" clip-path="url(#a)">
-                  <path d="M18 17h-2v2h2v-2ZM32 17H20v2h12v-2ZM18 21h-2v2h2v-2ZM32 21H20v2h12v-2ZM18 25h-2v2h2v-2ZM32 25H20v2h12v-2ZM18 29h-2v2h2v-2ZM32 29H20v2h12v-2Z" />
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path fill="#fff" d="M16 17h16v14H16z" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="catalog-select-control-wrapper">
+          <select class="select-control" aria-label="Сортировка">
+            <option value="cheap">Сначала дешевые</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
         </div>
+        <!-- VIEW BUTTONS -->
+        <div class="card-view-buttons-wrapper">
+          <ul class="card-view-buttons">
+            <li class="card-view-item">
+              <a class="card-view-button card-view-button-grid card-view-button-current" href="catalog.html?view=tile">
+                <span class="visually-hidden">Кнопка отображения списка гостиниц в виде сетки</span>
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 0H0V6H4V0Z" fill="black"/>
+                  <path d="M16 0H12V6H16V0Z" fill="black"/>
+                  <path d="M10 0H6V6H10V0Z" fill="black"/>
+                  <path d="M4 8H0V14H4V8Z" fill="black"/>
+                  <path d="M16 8H12V14H16V8Z" fill="black"/>
+                  <path d="M10 8H6V14H10V8Z" fill="black"/>
+                </svg>
+              </a>
+            </li>
+            <li class="card-view-item">
+              <a class="card-view-button card-view-button-huge" href="catalog.html?view=card">
+                <span class="visually-hidden">Кнопка отображения списка гостиниц в виде крупных карточек</span>
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 12H0V14H16V12Z" fill="black"/>
+                  <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black"/>
+                </svg>
+              </a>
+            </li>
+            <li class="card-view-item">
+              <a class="card-view-button card-view-button-list" href="catalog.html?view=list">
+                <span class="visually-hidden">Кнопка отображения списка гостиниц в виде списка</span>
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 0H0V2H2V0Z" fill="black"/>
+                  <path d="M16 0H4V2H16V0Z" fill="black"/>
+                  <path d="M2 4H0V6H2V4Z" fill="black"/>
+                  <path d="M16 4H4V6H16V4Z" fill="black"/>
+                  <path d="M2 8H0V10H2V8Z" fill="black"/>
+                  <path d="M16 8H4V10H16V8Z" fill="black"/>
+                  <path d="M2 12H0V14H2V12Z" fill="black"/>
+                  <path d="M16 12H4V14H16V12Z" fill="black"/>
+                  </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        </div>
+        <!-- HOTELS LIST -->
+        <div class="hotel-results-wrapper">
         <ul class="hotels-list">
           <li class="hotels-list-item">
             <a class="hotels-list-link" href="#">
@@ -249,6 +245,8 @@
             <img class="rating-stars-img" src="images/catalog/2-raiting-stars.png" width="140" height="37" alt="2 звезды рейтинга">
           </li>
         </ul>
+        </div>
+        <!-- PAGINATION -->
         <h3 class="visually-hidden">Нумерация страниц поиска</h3>
         <ul class="pagination">
           <li class="paginaition-item">
@@ -268,21 +266,25 @@
             <a class="pagination-link next-page" href="#">...</a>
           </li>
           <li class="paginaition-item">
-            <a class="pagination-link" href="#">10</a>
+            <a class="pagination-link pagination-link-two-numbers" href="#">10</a>
           </li>
         </ul>
       </section>
+      <!-- SUBSCRIPTION -->
       <section class="newsletter-catalog" data-test="subscribe">
-        <h2 class="section-title catalog-subscribtion-title">Подпишитесь на рассылку</h2>
-        <p class="title-caption catalog-subscribtion-promise">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <div class="newsletter-container">
+        <h2 class="section-title catalog-subscription-title">Подпишитесь на рассылку</h2>
+        <p class="title-caption catalog-subscription-promise">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="newsletter-email">Укажите ваш e-mail</label>
           <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
           <button class="button newsletter-submit" type="submit">Подписаться</button>
         </form>
+        </div>
       </section>
       </div>
     </main>
+    <!-- FOOTER -->
     <footer class="main-footer" data-test="footer">
       <div class="page-footer-container">
       <ul class="social-list">
