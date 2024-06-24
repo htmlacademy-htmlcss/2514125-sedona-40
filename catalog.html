@@ -11,9 +11,11 @@
   <body>
     <header class="header-main" data-test="header">
       <nav class="navigation-main">
+        <!-- LOGO -->
         <a class="sedona-logo-main" href="index.html">
           <img class="main-header-logo" src="images/header/sedona-logo.svg" width="140" heigh="70" alt="Логотип города Sedona">
         </a>
+        <!-- NAVIGATION LIST -->
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
@@ -25,9 +27,10 @@
             <a class="navigation-link current-link" href="catalog.html" aria-current="page">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-user-list">
+        <!-- USER NAVIGATION -->
+        <ul class="navigation-list navigation-user-list">
           <li class="navigation-user-item">
-            <a class="navigation-user-serach navigation-user-link" href="#">
+            <a class="navigation-user-search navigation-user-link" href="#">
               <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
                 <path fill="#000" d="m19.5 18.008-3.7-3.68c1-1.292 1.7-2.983 1.7-4.872 0-4.376-3.6-7.956-8-7.956s-8 3.68-8 8.055c0 4.376 3.6 7.956 8 7.956 1.8 0 3.5-.597 4.9-1.69l3.7 3.679 1.4-1.492Zm-10-2.486c-3.3 0-6-2.685-6-5.967 0-3.282 2.7-5.967 6-5.967s6 2.685 6 5.967c0 3.282-2.7 5.967-6 5.967Z" />
               </svg>
@@ -44,15 +47,19 @@
             <span class="favorites-counter">12</span>
           </li>
         </ul>
+        <!-- BUTTON WANT HERE -->
         <div class="want-here-button-wrapper">
-          <a class="want-here-button" href="#">Хочу сюда!</a>
+          <a class="button want-here-button" href="#">Хочу сюда!</a>
         </div>
       </nav>
     </header>
     <main class=" main-container catalog-main" datatest="main">
       <div class="page-container">
+      <!-- HOTEL FILTERS -->
+      <div class="inner-container">
       <section class="hotel-filters" data-test="filter">
         <h1 class="catalog-title">Гостиницы Седоны</h1>
+        <!-- BREADCRUMBS -->
         <ol class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html">
@@ -67,8 +74,10 @@
             <a class="breadcrumbs-link" href="#">Гостиницы</a>
           </li>
         </ol>
+        <!-- FILTERS -->
         <h2 class="visually-hidden">Фильтры выбора гостиниц</h2>
         <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
+          <!-- INFRASTRUCTURE FILTER-->
           <fieldset class="catalog-filter-group fieldset-infrastructure">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
@@ -92,6 +101,7 @@
               </li>
             </ul>
           </fieldset>
+          <!-- TYPE OF HOUSING FILTER-->
           <fieldset class="catalog-filter-group fieldset-type-of-housing">
             <legend class="catalog-filter-title">Тип Жилья:</legend>
             <ul class="catalog-filter-list">
@@ -115,6 +125,7 @@
               </li>
             </ul>
           </fieldset>
+          <!-- PRICE FILTER-->
           <fieldset class="catalog-filter-group fieldset-price">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
             <label class="filter-range-control">
@@ -127,15 +138,19 @@
               <input class="range-control-input" type="range" min="0" max="9000">
             </label>
           </fieldset>
+          <!-- FILTERS BUTTONS -->
           <div class="button-wrapper">
-            <button class="filters-button filters-submition" type="submit">Применить</button>
-            <button class="filters-button filters-reset" type="reset">Сбросить</button>
+            <button class="button filters-button filters-submition" type="submit">Применить</button>
+            <button class="button filters-button filters-reset" type="reset">Сбросить</button>
           </div>
         </form>
       </section>
+    </div>
+      <!-- SEARCH RESULTS -->
       <section class="search-results" data-test="catalog">
         <div class="search-results-header">
         <h2 class="search-results-title">Найдено гостиниц: 38</h2>
+        <!-- SORT SELECTOR -->
         <div class="catalog-select-control-wrapper">
           <select class="select-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешевые</option>
@@ -146,7 +161,7 @@
         <div class="card-view-buttons-wrapper">
           <ul class="card-view-buttons">
             <li class="card-view-item">
-              <a class="card-view-button card-view-button-grid card-view-button-current" href="catalog.html?view=tile">
+              <a class="button card-view-button card-view-button-grid card-view-button-current" href="catalog.html?view=tile">
                 <span class="visually-hidden">Кнопка отображения списка гостиниц в виде сетки</span>
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 0H0V6H4V0Z" fill="black"/>
@@ -159,7 +174,7 @@
               </a>
             </li>
             <li class="card-view-item">
-              <a class="card-view-button card-view-button-huge" href="catalog.html?view=card">
+              <a class="button card-view-button card-view-button-huge" href="catalog.html?view=card">
                 <span class="visually-hidden">Кнопка отображения списка гостиниц в виде крупных карточек</span>
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M16 12H0V14H16V12Z" fill="black"/>
@@ -168,7 +183,7 @@
               </a>
             </li>
             <li class="card-view-item">
-              <a class="card-view-button card-view-button-list" href="catalog.html?view=list">
+              <a class="button card-view-button card-view-button-list" href="catalog.html?view=list">
                 <span class="visually-hidden">Кнопка отображения списка гостиниц в виде списка</span>
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2 0H0V2H2V0Z" fill="black"/>
@@ -197,8 +212,8 @@
             </a>
             <p class="type-of-housing">Гостиница</p>
             <span class="price">От 4000 ₽</span>
-            <a class="more-button" href="#">Подробнее</a>
-            <button class="add-to-favorite" type="button">В избранное</button>
+            <a class="button more-button" href="#">Подробнее</a>
+            <button class="button add-to-favorite" type="button">В избранное</button>
             <p class="raiting">Рейтинг: 8,5</p>
             <img class="rating-stars-img" src="images/catalog/4-raiting-stars.png" width="140" height="37" alt="4 звезды рейтинга">
           </li>
@@ -211,8 +226,8 @@
             </a>
             <p class="type-of-housing">Гостиница</p>
             <span class="price">От 5000 ₽</span>
-            <a class="more-button" href="#">Подробнее</a>
-            <button class="add-to-favorite already-in-favorites" type="button">В избранном</button>
+            <a class="button more-button" href="#">Подробнее</a>
+            <button class="button add-to-favorite already-in-favorites" type="button">В избранном</button>
             <p class="raiting">Рейтинг: 9,2</p>
             <img class="rating-stars-img" src="images/catalog/4-raiting-stars.png" width="140" height="37" alt="4 звезды рейтинга">
           </li>
@@ -225,8 +240,8 @@
             </a>
             <p class="type-of-housing">Гостиница</p>
             <span class="price">От 2500 ₽</span>
-            <a class="more-button" href="#">Подробнее</a>
-            <button class="add-to-favorite" type="button">В избранное</button>
+            <a class="button more-button" href="#">Подробнее</a>
+            <button class="button add-to-favorite" type="button">В избранное</button>
             <p class="raiting">Рейтинг: 6,9</p>
             <img class="rating-stars-img" src="images/catalog/3-raiting-stars.png" width="140" height="37" alt="3 звезды рейтинга">
           </li>
@@ -239,8 +254,8 @@
             </a>
             <p class="type-of-housing">Гостиница</p>
             <span class="price">От 1500 ₽</span>
-            <a class="more-button" href="#">Подробнее</a>
-            <button class="add-to-favorite" type="button">В избранное</button>
+            <a class="button more-button" href="#">Подробнее</a>
+            <button class="button add-to-favorite" type="button">В избранное</button>
             <p class="raiting">Рейтинг: 5,0</p>
             <img class="rating-stars-img" src="images/catalog/2-raiting-stars.png" width="140" height="37" alt="2 звезды рейтинга">
           </li>
@@ -282,6 +297,7 @@
         </form>
         </div>
       </section>
+      </div>
       </div>
     </main>
     <!-- FOOTER -->
