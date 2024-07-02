@@ -722,7 +722,6 @@ body {
 }
 
 .more-button {
-  min-width: 140px;
   padding: 8px 26px;
   grid-column: 1 / 2;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -738,7 +737,7 @@ body {
 
 .add-to-favorite {
   min-width: 140px;
-  padding: 8px 18px;
+  padding: 8px 20px;
   grid-column: 2 / 3;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 16px;
@@ -754,9 +753,10 @@ body {
 
 .already-in-favorites {
   background-color: #7db54f;
+  padding: 8px 18px;
 }
 
-.raiting {
+.rating {
   margin: 0;
   padding: 9px 22px 8px 23px;
   grid-column: 2 / 3;
