@@ -788,17 +788,17 @@ body {
 }
 
 .fieldset-infrastructure {
-  width: 150px;
+  max-width: 150px;
   margin-right: 70px;
 }
 
 .fieldset-type-of-housing {
-  width: 150px;
+  max-width: 150px;
   margin-right: 140px;
 }
 
 .fieldset-price {
-  width: 288px;
+  max-width: 288px;
   margin-right: 70px;
 }
 
@@ -821,17 +821,164 @@ body {
 }
 
 .control-input {
+  position:relative;
+  top: -2px;
+  margin: 0;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control:has(.control-input:disabled) {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.control-input[type="checkbox"] {
+  border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked:before {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  display: block;
+  width: 12px;
+  height: 10px;
+  background-image: url("/images/catalog/check-mark.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+.control-label {
+  margin-left: 16px;
+}
+
+.control-input[type="radio"] {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+  content: "";
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-range-control {
+  position: relative;
+  display: flex;
+  margin-right: 2px;
+}
+
+.control-input {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 23px;
 }
 
 .range-control-input {
+  width: 143px;
+  padding: 12px 20px;
+  background: #f2f2f2;
+  appearance: textfield;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   border: none;
+}
+
+.price-range-label {
+  position: absolute;
+  top: 12px;
+  left: 106px;
+  opacity: 0.3;
+  color: #000000;
+}
+
+.input-of-min-price {
+  border-radius: 4px 0 0 4px;
+}
+
+.input-of-max-price {
+  border-radius: 0 4px 4px 0;
+}
+
+.range-control-input::-webkit-outer-spin-button,
+.range-control-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.price-filter-scale {
+  position: relative;
+  margin-top: 48px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3)
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  transform: scale(1.05);
+  border:#68a2ca;
+}
+
+.range-toggle:focus {
+  transform: scale(1.05);
+}
+
+.range-toggle:active {
+  transform: scale(1.05);
+  outline: 3px #68a2ca;
+}
+
+.toggle-min-price {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max-price {
+  top: -8px;
+  right: 0;
 }
 
 /* FILTERS BUTTONS */
@@ -888,6 +1035,8 @@ body {
   text-transform: uppercase;
 }
 
+/* SELECT */
+
 .select-control {
   padding: 14px 131px 14px 20px;
   margin-right: 70px;
@@ -898,6 +1047,8 @@ body {
   border-radius: 4px;
   background-color: transparent;
 }
+
+/* CARD VIEW BUTTONS */
 
 .card-view-buttons {
   max-width: 160px;
