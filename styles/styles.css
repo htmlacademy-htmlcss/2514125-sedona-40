@@ -58,7 +58,6 @@ html {
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
-  background-color: #756157;
   text-decoration: none;
   text-transform: uppercase;
   font-style: normal;
@@ -68,17 +67,20 @@ html {
   cursor: pointer;
 }
 
-.button:hover {
-  background: #615048;
-}
-
-.button:focus-within {
-  background: #615048;
-}
-
 .button:active {
+color: rgba(255, 255, 255, 0.3);
+}
+
+.brown-button:hover {
+  background: #615048;
+}
+
+.brown-button:focus-within {
+  background: #615048;
+}
+
+.brown-button:active {
   background: #756157;
-  color: rgba(255, 255, 255, 0.3);
 }
 
 .blue-button:hover {
@@ -91,7 +93,6 @@ html {
 
 .blue-button:active {
   background-color: #82b3d3;
-  color: rgba(255, 255, 255, 0.3);
 }
 
 .green-button:hover {
@@ -104,11 +105,10 @@ html {
 
 .green-button:active {
   background-color: #7db54f;
-  color: rgba(255, 255, 255, 0.3);
 }
 
 .transparent-button:hover {
-  opacity: 0.7;
+  opacity: 0.6;
   background-color: transparent;
 }
 
@@ -118,7 +118,6 @@ html {
 
 .transparent-button:active {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.3);
 }
 
 .button:disabled {
@@ -129,7 +128,7 @@ html {
 
 .transparent-button:disabled {
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.2);
+  opacity: 0.1;
 }
 
 /* BODY */
@@ -600,6 +599,14 @@ body {
   border: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+}
+
+.field:hover {
+  background-color: #E6E6E6;
+}
+
+.field:focus-within {
+  background-color: #E6E6E6;
 }
 
 .newsletter-submit {
@@ -1133,7 +1140,7 @@ body {
 
 .fieldset-infrastructure {
   width: 150px;
-  margin-right: 70px;
+  margin-right: 71px;
 }
 
 .fieldset-type-of-housing {
@@ -1143,13 +1150,13 @@ body {
 
 .fieldset-price {
   width: 288px;
-  margin-right: 70px;
+  margin-right: 68px;
 }
 
 .catalog-filter-title {
   margin: 0;
   padding: 0;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -1281,7 +1288,7 @@ body {
 
 .price-filter-scale {
   position: relative;
-  margin-top: 48px;
+  margin-top: 43px;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -1453,7 +1460,7 @@ body {
   padding-bottom: 38px;
   display: grid;
   grid-template-columns: repeat(3, 340px);
-  gap: 18px 20px;
+  gap: 17px 20px;
   list-style: none;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -1650,7 +1657,7 @@ body {
 }
 
 .catalog-subscription-promise {
-  margin-bottom: 54px;
+  margin-bottom: 56px;
   font-size: 22px;
   line-height: 26px;
   text-align: center;
