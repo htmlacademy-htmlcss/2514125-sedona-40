@@ -1444,6 +1444,7 @@ body {
 }
 
 .select-control:focus {
+  outline: none;
   border-color: #68a2ca;
 }
 
